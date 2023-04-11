@@ -32,3 +32,6 @@ nb-configuration.xml
 log/
 target/
 .mvn/wrapper/maven-wrapper.jar
+
+# scratch
+.scratch.md
