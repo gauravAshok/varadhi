@@ -38,9 +38,10 @@ public class RestVerticle extends AbstractVerticle {
             if (!def.behaviour().contains(RouteDefinition.RouteBehaviour.open)) {
                 coreServices.getAuthHandlers().configure(route);
             }
+
+            route.handler(def.handler());
             route.failureHandler(failureHandler);
         }
-
 
         HttpServerOptions options = new HttpServerOptions();
         // TODO: why?

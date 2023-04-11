@@ -7,7 +7,7 @@ import lombok.Data;
 
 import java.util.HashMap;
 
-public class AuthOptions extends HashMap<AuthOptions.Mechanism, JsonObject> {
+public class AuthOptions extends HashMap<AuthOptions.Mechanism, Object> {
 
     public enum Mechanism {
         jwt
@@ -26,10 +26,10 @@ public class AuthOptions extends HashMap<AuthOptions.Mechanism, JsonObject> {
 
     public <T> T asConfig(Class<T> configClass) {
         validate();
-        JsonObject json = values().iterator().next();
+        Object json = values().iterator().next();
 
         try {
-            return json.mapTo(configClass);
+            return JsonObject.mapFrom(json).mapTo(configClass);
         } catch (IllegalArgumentException e) {
             throw new InvalidConfigException(e);
         }
