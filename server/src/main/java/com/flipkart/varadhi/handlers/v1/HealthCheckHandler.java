@@ -1,4 +1,4 @@
-package com.flipkart.varadhi.handlers;
+package com.flipkart.varadhi.handlers.v1;
 
 import com.flipkart.varadhi.RouteDefinition;
 import io.vertx.core.Handler;

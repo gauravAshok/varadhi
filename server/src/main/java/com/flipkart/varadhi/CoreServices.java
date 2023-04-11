@@ -2,7 +2,7 @@ package com.flipkart.varadhi;
 
 import com.flipkart.varadhi.configs.ServerConfiguration;
 import com.flipkart.varadhi.handlers.AuthHandlers;
-import com.flipkart.varadhi.handlers.HealthCheckHandler;
+import com.flipkart.varadhi.handlers.v1.HealthCheckHandler;
 import com.flipkart.varadhi.handlers.v1.TopicHandlers;
 import io.vertx.core.Vertx;
 import lombok.Getter;
