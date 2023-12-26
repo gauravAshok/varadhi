@@ -172,9 +172,9 @@ Once we have chosen the new nsc, there are 3 steps to follow, to be able to conc
 2. Switch failed messages production to these new RQ/DLQ storage topics.
 3. Re-shard the groupState according to new shards.
 4. Resume consumption by running
-   a. new shards. run RQ/DLQ as well if no storage topics were added, or if the new storage topics were added, then wait for previous storage topics' lag to be
-   zero.
-   b. old shards for any RQ/DLQ lag. The old shards will run as feeders to the new shards.
+    - new shards. run RQ/DLQ as well if no storage topics were added, or if the new storage topics were added, then wait for previous storage topics' lag to be
+      zero.
+    - old shards for any RQ/DLQ lag. The old shards will run as feeders to the new shards.
 
 The above strategy can be used for increasing/decreasing shards.
 
